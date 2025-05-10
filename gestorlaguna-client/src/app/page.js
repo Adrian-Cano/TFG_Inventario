@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Home from "./home/page"
+import Home from "./home/home.jsx"
 
 export default function Raiz() {
   return (

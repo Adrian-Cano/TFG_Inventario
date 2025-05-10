@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Home from "./home/page"
 
-export default function Home() {
+export default function Raiz() {
   return (
-    <div>
-      <p>Hola</p>
+    <div className="bg-gray-200">
+    <Home></Home>
     </div>
   );
 }

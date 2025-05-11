@@ -50,16 +50,16 @@ export default function RootLayout({ children }) {
 
           <div className="flex-col mt-5 justify-center">
             <div className="seccion">
-              <p>Mis prestamos</p>
+              <a href="/home">Mis prestamos</a>
             </div>
             <div className="seccion">
-              <p>Mis reservas</p>
+              <a href="/reservas">Mis reservas</a>
             </div>
             <div className="seccion">
-              <p>Ver productos</p>
+              <a href="/productos">Ver productos</a>
             </div>
             <div className="seccion border-b-2 border-white">
-              <p>Aulas</p>
+              <a href="/aulas">Aulas</a>
             </div>
           </div>
 

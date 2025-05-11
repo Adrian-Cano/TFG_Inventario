@@ -3,7 +3,11 @@
     justify-content: center;
     padding: 0.75rem;
 }
-.seccion p{
+.seccion a{
     color: white;
+    display: block;
     text-align: center;
+}
+.seccion a:hover {
+    text-decoration: underline;
 }

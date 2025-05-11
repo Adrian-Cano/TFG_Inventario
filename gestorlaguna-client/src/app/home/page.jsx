@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div className='w-max h-max'>
+    <div className='w-full h-full bg-gray-200'>
         <p className='text-blue-500 p-8 text-2xl'>Tus prestamos:</p>
 
         <div className='ml-8'>

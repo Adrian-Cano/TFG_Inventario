@@ -1,6 +1,18 @@
+"use client";
 import React from 'react'
+import { useEffect} from 'react';
+import { useLayout } from "../layout.js";
+
 
 function productos() {
+
+    const { sideBarHidden, setSideBarHidden } = useLayout();
+    
+        useEffect (() => {
+            setSideBarHidden(false);
+        }, []);
+    
+
   return (
     <div className='w-full h-full bg-gray-200'>
         <div className='justify-center p-5'>

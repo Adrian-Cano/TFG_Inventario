@@ -1,8 +1,17 @@
 "use client";
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useLayout } from "../layout.js";
+
 
 function aulas() {
+
+    const { sideBarHidden, setSideBarHidden } = useLayout();
+    
+        useEffect (() => {
+            setSideBarHidden(false);
+        }, []);
+    
 
     const [mostrarModal, setMostrarModal] = useState(false);
     const horasCentro = ["8:15", "9:10", "10:05", "11:00", "11:25", "12:20", "13:15", "14:10"];

@@ -1,6 +1,15 @@
+"use client";
 import React from 'react'
+import { useEffect } from 'react';
+import { useLayout } from "../layout.js";
 
 function reservas() {
+  const { sideBarHidden, setSideBarHidden } = useLayout();
+  
+      useEffect (() => {
+          setSideBarHidden(false);
+      }, []);
+  
   return (
     <div className='w-full h-full bg-gray-200'>
       <p className='text-blue-500 p-8 text-2xl'>Tus reservas:</p>

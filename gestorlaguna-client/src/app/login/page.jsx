@@ -1,13 +1,9 @@
-"use client";
-import Image from "next/image";
-import Home from "./home/page.jsx"
-import React, { useEffect } from 'react'
+import React from 'react'
 
-function page() {
-    
+function login() {
   return (
-    <div className='w-full min-h-screen bg-gray-200 flex justify-center items-center'>
-        <div className='bg-gray-100 rounded-xl border-2 border-blue-500 w-max h-max justify-center p-7 z-50'>
+    <div className='w-full h-full bg-gray-200 flex justify-center'>
+        <div className='bg-gray-100 rounded-xl border-2 border-blue-500 w-max justify-center p-7 z-50'>
             <h2 className='text-blue-500 text-center text-2xl font-bold'>Iniciar sesión</h2>
             <hr className='text-gray-400 mt-3'/>
             <br />
@@ -23,7 +19,6 @@ function page() {
         </div>
     </div>
   )
-  
 }
 
-export default page
+export default login

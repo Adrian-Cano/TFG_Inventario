@@ -6,7 +6,8 @@ import fotoPerfil from "../../public/img/fotoPerfil.jpg"
 import laguna from "../../public/img/laguna.jpg"
 import Image from "next/image";
 import "../styles/global.css"
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import Loader from "../../components/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,22 @@ export const useLayout = () => useContext(LayoutContext);
 
 export default function RootLayout({ children }) {
 
+  const [cargando, setCargando] = useState(true);
   const [sideBarHidden, setSideBarHidden] = useState(true);
+
+  useEffect(() => {
+    const ocultarLoader = () => {
+      setTimeout(() => setCargando(false), 500);
+    };
+
+    if (document.readyState === 'complete') {
+      ocultarLoader();
+    } else {
+      window.addEventListener("load", ocultarLoader);
+      return () => window.removeEventListener("load", ocultarLoader);
+    }
+  }, []);
+
   return (
     <html lang="en">
       <body
@@ -96,9 +112,12 @@ export default function RootLayout({ children }) {
          </>
         ):(
           <>
-          <div className="min-h-screen">
-            {children}
-          </div>
+          {cargando && <Loader />}
+          {!cargando &&
+            <div className="min-h-screen">
+              {children}
+            </div>
+          }
           </>
         )}
 

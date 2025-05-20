@@ -11,3 +11,11 @@
 .seccion a:hover {
     text-decoration: underline;
 }
+
+table {
+    margin: 2rem;
+}   
+table td {
+    padding: 0.5rem;
+    border: 1px solid gray;
+}

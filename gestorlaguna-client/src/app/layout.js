@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
 
           <div className="flex-col mt-5 justify-center">
             <div className="seccion">
-              <a href="/home">Mis prestamos</a>
+              <a href="/home">Mis préstamos</a>
             </div>
             <div className="seccion">
               <a href="/reservas">Mis reservas</a>
@@ -83,8 +83,11 @@ export default function RootLayout({ children }) {
             <div className="seccion">
               <a href="/productos">Ver productos</a>
             </div>
-            <div className="seccion border-b-2 border-white">
+            <div className="seccion">
               <a href="/aulas">Aulas</a>
+            </div>
+            <div className="seccion border-b-2 border-white">
+              <a href="/administracion">Administración</a>
             </div>
           </div>
 

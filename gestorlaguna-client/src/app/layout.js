@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import fotoPerfil from "../../public/img/fotoPerfil.jpg"
@@ -27,6 +28,14 @@ export default function RootLayout({ children }) {
 
   const [cargando, setCargando] = useState(true);
   const [sideBarHidden, setSideBarHidden] = useState(true);
+  const [modalSesionAbierto, setModalSesionAbierto] = useState(false);
+
+  function abrirCerrarModal() {
+    if(modalSesionAbierto)
+      setModalSesionAbierto(false);
+    else
+      setModalSesionAbierto(true);
+  }
 
   useEffect(() => {
     const ocultarLoader = () => {
@@ -60,7 +69,14 @@ export default function RootLayout({ children }) {
             className="rounded-4xl border-2 border-blue-400"
             width={50}
             height={50}
+            onClick={() => abrirCerrarModal()}
           />
+          <ChevronDownIcon className=" ml-2 w-9 h-10 text-blue-500" onClick={() => abrirCerrarModal()}/>
+
+          {modalSesionAbierto && (
+            <button className="bg-white rounded-xl p-3 border border-gray-300 absolute top-20">Cerrar sesión</button>
+          )}
+
         </div>
 
         <div className="fixed top-0 left-0 h-full bg-blue-500 w-60">

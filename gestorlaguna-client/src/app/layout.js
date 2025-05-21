@@ -114,6 +114,20 @@ export default function RootLayout({ children }) {
         </div>
 
         <div className="pl-60 p-5 flex items-center justify-between">
+          <div className='p-5 border-r-1 w-110 border-gray-300'>
+            <p className='text-gray-400'>Mapa Web:</p>
+            <hr className='text-gray-400' />
+            <div className='flex'>
+              <div className='flex flex-col p-3'>
+                <a className='text-gray-400 text-sm border-b-1 border-b-gray-300 p-1' href='/home'>Home - préstamos</a>
+                <a className='text-gray-400 text-sm border-b-1 border-b-gray-300 p-1' href='/aulas'>Aulas</a>
+                <a className='text-gray-400 text-sm border-b-1 border-b-gray-300 p-1' href='/productos'>Productos</a>
+              </div>
+              <div className='flex flex-col p-3'>
+                <a className='text-gray-400 text-sm border-b-1 border-b-gray-300 p-1' href='/reservas'>Reservas</a>
+              </div>
+            </div>
+          </div>
           <div className="flex-1 text-center">
             <p className="text-gray-500 text-xs underline">Página hecha por Marcos Pedroche y Adrián Cano - 2025</p>
           </div>
